@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "Register new account",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Тест Корги", "email": "test_corgi_unique@foxy.bank", "phone": "+79001234567"},
+      "expectedStatus": 200,
+      "expectedBody": {"account_id": "string"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

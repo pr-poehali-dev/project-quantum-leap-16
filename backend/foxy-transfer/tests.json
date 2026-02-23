@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "Transfer exceeds max limit",
+      "method": "POST",
+      "path": "/",
+      "body": {"from_account": "FX-0001", "to_account": "FX-0002", "amount": 99999},
+      "expectedStatus": 400,
+      "expectedBody": {"error": "string"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
