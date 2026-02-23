@@ -1,6 +1,7 @@
-import { ArrowUpRight, Sparkles } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Icon from "@/components/ui/icon"
+import { OpenAccountModal } from "@/components/OpenAccountModal"
 
 export function HeroSection() {
   return (
@@ -22,9 +23,11 @@ export function HeroSection() {
       </p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4">
-        <Button className="rounded-full bg-orange-500 px-6 hover:bg-orange-600 text-white font-semibold">
-          Открыть счёт <ArrowUpRight className="ml-2 h-4 w-4" />
-        </Button>
+        <OpenAccountModal>
+          <Button className="rounded-full bg-orange-500 px-6 hover:bg-orange-600 text-white font-semibold">
+            Открыть счёт <ArrowUpRight className="ml-2 h-4 w-4" />
+          </Button>
+        </OpenAccountModal>
         <Button variant="outline" className="rounded-full border-gray-700 bg-transparent text-white hover:bg-gray-800">
           <Icon name="Coins" className="mr-2 h-4 w-4 text-orange-400" /> Получить FoxToken
         </Button>

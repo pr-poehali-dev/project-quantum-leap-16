@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { OpenAccountModal } from "@/components/OpenAccountModal"
 
 export function Header() {
   return (
@@ -33,12 +34,14 @@ export function Header() {
         </a>
       </nav>
 
-      <Button
-        variant="outline"
-        className="rounded-full border-orange-500 text-orange-400 hover:bg-orange-500/10 hover:text-orange-300 bg-transparent"
-      >
-        Открыть счёт
-      </Button>
+      <OpenAccountModal>
+        <Button
+          variant="outline"
+          className="rounded-full border-orange-500 text-orange-400 hover:bg-orange-500/10 hover:text-orange-300 bg-transparent"
+        >
+          Открыть счёт
+        </Button>
+      </OpenAccountModal>
     </header>
   )
 }
